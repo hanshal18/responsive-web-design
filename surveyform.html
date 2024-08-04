@@ -1,0 +1,120 @@
+<!--
+You should have a page title in an h1 element with an id of title
+You should have a short explanation in a p element with an id of description
+You should have a form element with an id of survey-form
+Inside the form element, you are required to enter your name in an input field that has an id of name and a type of text
+Inside the form element, you are required to enter your email in an input field that has an id of email
+If you enter an email that is not formatted correctly, you will see an HTML5 validation error
+Inside the form, you can enter a number in an input field that has an id of number
+The number input should not accept non-numbers, either by preventing you from typing them or by showing an HTML5 validation error (depending on your browser).
+If you enter numbers outside the range of the number input, which are defined by the min and max attributes, you will see an HTML5 validation error
+For the name, email, and number input fields, you can see corresponding label elements in the form, that describe the purpose of each field with the following ids: id="name-label", id="email-label", and id="number-label"
+For the name, email, and number input fields, you can see placeholder text that gives a description or instructions for each field
+Inside the form element, you should have a select dropdown element with an id of dropdown and at least two options to choose from
+Inside the form element, you can select an option from a group of at least two radio buttons that are grouped using the name attribute
+Inside the form element, you can select several fields from a series of checkboxes, each of which must have a value attribute
+Inside the form element, you are presented with a textarea for additional comments
+Inside the form element, you are presented with a button with id of submit to submit all the inputs
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey form</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #ffffff;
+            background: #262626;
+        }
+
+        h1,
+        p {
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        form {
+            padding-top: 5rem;
+            width: 100%;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        form label,
+        form textarea {
+            display: block;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 0.5rem 0;
+        }
+
+        input[type="checkbox"] {
+            width: unset;
+            display: inline;
+        }
+
+        form fieldset input,
+        form textarea {
+            width: 100%;
+            background: #303030;
+            color: #ffffff;
+        }
+
+        form fieldset input {
+            height: 1.5rem;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            max-width: 300px;
+            margin: 1rem auto;
+            color: #ffffff;
+            background: #404040;
+            height: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="title">Survey form</h1>
+    <p id="description">A survey form of gymnasium</p>
+    <form action="" id="survey-form">
+        <fieldset>
+            <legend><label for="name" id="name-label">name:</label></legend><input type="text" id="name"
+                placeholder="enter your name..." required />
+        </fieldset>
+        <fieldset>
+            <legend><label for="email" id="email-label">email:</label></legend><input type="email" id="email"
+                placeholder="your personal email address" required />
+        </fieldset>
+        <fieldset>
+            <legend><label for="number" id="number-label">age:</label></legend><input type="number" id="number" required
+                min="15" max="120" placeholder="your age" />
+        </fieldset>
+        <select name="origin" id="dropdown">
+            <option value="india">indian</option>
+            <option value="non-indian">non indian</option>
+        </select>
+        <label for="veg"><input type="radio" name="diet" id="veg" value="veg" checked />vegitarian</label>
+        <label for="non-veg"><input type="radio" name="diet" id="non-veg" value="non-veg" />non vegitarian</label>
+        <fieldset>
+            <legend>explain your current diet</legend>
+            <textarea name="diet-explaination" id="diet-explaination" cols="30" rows="10"></textarea>
+        </fieldset>
+        <fieldset>
+            <legend>agree?</legend>
+            <input type="checkbox" name="terms" id="terms" value="terms and conditions" />terms and conditions
+            <input type="checkbox" name="privacy" id="privacy" value="privacy and policy" />privacy and policy
+        </fieldset>
+        <input type="submit" value="submit" id="submit" />
+    </form>
+</body>
+
+</html>

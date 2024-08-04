@@ -1,0 +1,127 @@
+<!--
+Your product landing page should have a header element with a corresponding id="header"
+You can see an image within the header element with a corresponding id="header-img" (A logo would make a good image here)
+Within the #header element, you can see a nav element with a corresponding id="nav-bar"
+You can see at least three clickable elements inside the nav element, each with the class nav-link
+When you click a .nav-link button in the nav element, you are taken to the corresponding section of the landing page
+You can watch an embedded product video with id="video"
+Your landing page has a form element with a corresponding id="form"
+Within the form, there is an input field with id="email" where you can enter an email address
+The #email input field should have placeholder text to let users know what the field is for
+The #email input field uses HTML5 validation to confirm that the entered text is an email address
+Within the form, there is a submit input with a corresponding id="submit"
+When you click the #submit element, the email is submitted to a static page (use this mock URL: https://www.freecodecamp.com/email-submit)
+The navbar should always be at the top of the viewport
+Your product landing page should have at least one media query
+Your product landing page should utilize CSS flexbox at least once
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Clock</title>
+    <style>
+        header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            flex-wrap: nowrap;
+        }
+
+        header figure img{
+            width: 200px;
+            height:100px;
+        }
+        header ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header ul li {
+            margin: 0px 1rem;
+            list-style: none;
+        }
+
+        #header {
+            position: fixed;
+            top: 0; 
+        }
+        iframe {
+            border-radius: 50px;
+        }
+        #margin-top{
+            margin-top: 20rem;
+            margin-bottom: 20rem;
+        }
+        #iframe {
+            width: 33%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        h1 {
+            width: 33%;
+            margin: auto;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        #form {
+            width: 33%;
+            margin: auto;
+            font-family: 'Courier New', Courier, monospace;
+            margin-bottom: 20rem;
+        }
+
+        #form input {
+            display: block;
+        }
+        input[type="email"]{
+            width: 33%;
+            margin: 1rem auto;
+            height: 1.5rem;
+            border-radius: 1rem;
+        }
+        input[type="submit"]{
+            background-color: #262626;
+            color: #ffffff;
+            width: 20%;
+            margin: auto;
+            height: 3rem;
+            border-radius: 1rem;
+            font-size: 1.5rem;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        @media (max-width: 650px) {}
+    </style>
+</head>
+<body>
+    <header id="header">
+        <figure>
+            <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/product-landing-page-logo.png" alt="chess clock" id="header-img">
+        </figure>
+        <nav id="nav-bar">
+            <ul>
+                <li><a href="#video" class="nav-link">Video Demo</a></li>
+                <li><a href="#in-form" class="nav-link">Inquiry Form</a></li>
+                <li><a href="#footer" class="nav-link">Footer</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="margin-top">
+        <h1>Demo of how chess clock works</h1>
+        <figure id="iframe">
+            <iframe  id="video" width="560" height="315" src="https://www.youtube-nocookie.com/embed/Hg75sM2VQiU?si=QI2Yybff50FWIbml" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <figcaption>This is just demo video</figcaption>
+        </figure>
+    </section>
+    <section id="in-form">
+        <h1>Inquiry Form</h1>
+        <form action="https://www.freecodecamp.com/email-submit" id="form">
+            <input type="email" name="email" id="email" placeholder="you personal email" required/>
+            <input type="submit" value="submit" id="submit">
+        </form>
+    </section>
+    <footer id="footer">for more info:- <a href="https://www.freecodecamp.org/hanshal18">@hanshal18</a></footer>
+</body>
+</html>

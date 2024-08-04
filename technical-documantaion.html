@@ -1,0 +1,252 @@
+<!--
+You can see a main element with a corresponding id="main-doc", which contains the page's main content (technical documentation)
+Within the #main-doc element, you can see several section elements, each with a class of main-section. There should be a minimum of five
+The first element within each .main-section should be a header element, which contains text that describes the topic of that section.
+Each section element with the class of main-section should also have an id that corresponds with the text of each header contained within it. Any spaces should be replaced with underscores (e.g. The section that contains the header "JavaScript and Java" should have a corresponding id="JavaScript_and_Java")
+The .main-section elements should contain at least ten p elements total (not each)
+The .main-section elements should contain at least five code elements total (not each)
+The .main-section elements should contain at least five li items total (not each)
+You can see a nav element with a corresponding id="navbar"
+The navbar element should contain one header element which contains text that describes the topic of the technical documentation
+Additionally, the navbar should contain link (a) elements with the class of nav-link. There should be one for every element with the class main-section
+The header element in the #navbar must come before any link (a) elements in the navbar
+Each element with the class of nav-link should contain text that corresponds to the header text within each section (e.g. if you have a "Hello world" section/header, your navbar should have an element which contains the text "Hello world")
+When you click on a navbar element, the page should navigate to the corresponding section of the #main-doc element (e.g. If you click on a .nav-link element that contains the text "Hello world", the page navigates to a section element with that id, and contains the corresponding header)
+On regular sized devices (laptops, desktops), the element with id="navbar" should be shown on the left side of the screen and should always be visible to the user
+Your technical documentation should use at least one media query
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML documentation</title>
+    <style>
+        html,
+        body {
+            min-width: 290px;
+            color: #ffffff;
+            background-color: #262626;
+            font-family:'Courier New', Courier, monospace;
+        }
+
+        #navbar {
+            position: fixed;
+            min-width: 290px;
+            top: 0px;
+            left: 0px;
+            width: 300px;
+            height: 100%;
+            border-right: solid;
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+
+        header {
+            color: #ffffff;
+            margin: 10px;
+            text-align: center;
+            font-size: 2em;
+        }
+
+        #main-doc header {
+            text-align: center;
+            margin: 0px;
+        }
+
+        #navbar ul {
+            height: 88%;
+            padding: 0;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        #navbar li {
+            color: #4d4e53;
+            border-top: 1px solid;
+            list-style:none;
+            position: relative;
+            width: 100%;
+        }
+
+        #navbar a {
+            display: block;
+            padding: 10px 30px;
+            color: #ffffff;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        #main-doc {
+            position: absolute;
+            margin-left: 310px;
+            padding: 20px;
+            margin-bottom: 110px;
+        }
+
+        section article {
+            color: #ffffff;
+            margin: 15px;
+            font-size: 0.96em;
+        }
+
+        section li {
+            margin: 15px 0px 0px 20px;
+        }
+
+        @media only screen and (max-width: 815px) {
+  /* For mobile phones: */
+  #navbar ul {
+    border: 1px solid;
+    height: 207px;
+  }
+
+  #navbar {
+    background-color: #262626;
+    position: absolute;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-height: 275px;
+    border: none;
+    z-index: -1;
+    border-bottom: 2px solid;
+  }
+
+  #main-doc {
+    position: relative;
+    margin-left: 0px;
+    margin-top: 270px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #main-doc {
+    margin-left: -10px;
+  }
+
+  code {
+    margin-left: -20px;
+    width: 100%;
+    padding: 15px;
+    padding-left: 10px;
+    padding-right: 45px;
+    min-width: 233px;
+  }
+}
+    </style>
+</head>
+
+<body>
+    <main id="main-doc">
+        <nav id="navbar">
+            <header>brief HTML documentation</header>
+            <ul>
+                <li><a href="#DOCTYPE_element" class="nav-link">DOCTYPE element</a></li>
+                <li><a href="#HTML_element" class="nav-link">HTML element</a></li>
+                <li><a href="#HEAD_element" class="nav-link">HEAD element</a></li>
+                <li><a href="#BODY_element" class="nav-link">BODY element</a></li>
+                <li><a href="#FOOTER_element" class="nav-link">FOOTER element</a></li>
+            </ul>
+        </nav>
+        <section class="main-section" id="DOCTYPE_element">
+            <header id="header">DOCTYPE element</header>
+            <article class="article">
+                <p>The <code></code>&lt;!DOCTYPE html&gt;</code> declaration is an important part of HTML documents,
+                    signaling to the web
+                    browser that the document is written in HTML5. It should be the very first line in an HTML file,
+                    preceding the <code>&lt;html&gt;</code> tag.</p>
+
+                <h3>Key Points about <code>&lt;!DOCTYPE html&gt;</code>:</h3>
+                <ul>
+                    <li>
+                        <p>Purpose: It tells the browser to render the page in standards mode, ensuring consistent
+                            behavior across different browsers.</p>
+                    </li>
+                    <li>
+                        <p>HTML5 Standard: The declaration is simple and does not require a reference to a DTD (Document
+                            Type Definition), as was the case in earlier HTML versions. This simplification reflects the
+                            move towards a more flexible web.</p>
+                    </li>
+                    <li>
+                        <p>No Closing Tag: The <code>&lt;!DOCTYPE html&gt;</code> declaration is not a tag itself and
+                            does not require a closing tag.</p>
+                    </li>
+                    <li>
+                        <p>Compatibility: Using this declaration helps avoid quirks mode, where browsers may render the
+                            page differently based on outdated standards.</p>
+                    </li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="HTML_element">
+            <header id="header">HTML element</header>
+            <article class="article">
+                <p>HTML (HyperText Markup Language) tags are the building blocks of web pages. They are used to
+                    structure and format content on the internet. Each tag is enclosed in angle brackets, like
+                    <code>&lt;tagname&gt;</code> , and usually comes in pairs, with an opening tag and a closing tag
+                    (e.g., <code>&lt;p&gt;</code>
+                    for
+                    opening and <code>&lt;p&gt;</code> for closing).
+                </p>
+                <h3> Key Points about HTML Tags:</h3>
+                <ul>
+                    <li>
+                        <p>Structure: Tags define elements like headings, paragraphs, links, images, and lists.</p>
+                    </li>
+                    <li>
+                        <p>Attributes: Tags can include attributes to provide additional information, such as href for
+                            links or src for images (e.g., <code>&lt;img src="image.jpg" alt="description"&gt;</code>).
+                        </p>
+                    </li>
+                    <li>
+                        <p>Nested Tags: Tags can be nested within one another to create complex structures (e.g.,
+                            <code>&lt;div&gt;</code> <code>&lt;p&gt;</code>Text<code>&lt;/p&gt;</code>
+                            <code>&lt;/div&gt;</code>).
+                        </p>
+                    </li>
+                    <li>
+                        <p> Tags: HTML5 introduced semantic tags (e.g., <code>&lt;header&gt;</code>,
+                            <code>&lt;footer&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>)
+                            that provide meaning to the structure and help with SEO and accessibility.
+                        </p>
+                    </li>
+                    <li>
+                        <p>Self-Closing Tags: Some tags do not require a closing tag (e.g., <code>&lt;br&gt;</code> for
+                            a line break or <code>&lt;img&gt;</code> for images).</p>
+                    </li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="HEAD_element">
+            <header id="header">HEAD element</header>
+            <article>
+                <p>The <code>&lt;head&gt;</code> element is a crucial part of an HTML document, positioned between the
+                    <code>&lt;!DOCTYPE html&gt;</code> declaration and the <code>&lt;body&gt;</code> tag. It contains
+                    metadata and links to resources that provide information about the document but are not displayed
+                    directly on the webpage.
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="BODY_element">
+            <header id="header">BODY element</header>
+            <article>
+                <p>The <code>&lt;body&gt;</code> element is a fundamental part of an HTML document that contains the
+                    content intended for display in a web browser. Everything that users see on a webpage—text, images,
+                    links, videos, and interactive elements—resides within this tag.</p>
+            </article>
+        </section>
+        <section class="main-section" id="FOOTER_element">
+            <header id="header">FOOTER element</header>
+            <article>
+                <p>The <code>&lt;footer&gt;</code> element in HTML is a semantic tag used to define the footer section
+                    of a webpage or a specific section within a document. It typically contains information related to
+                    the content it accompanies, such as copyright details, author information, links to related
+                    documents, or contact information.</p>
+            </article>
+        </section>
+    </main>
+</body>
+
+</html>
