@@ -18,7 +18,6 @@ The navbar should always be at the top of the viewport
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <style>
-        @media (max-width: 650px) {}
         body{
             background: #262626;
             color:#ffffff;
@@ -40,7 +39,7 @@ The navbar should always be at the top of the viewport
             list-style:none;
         }
 
-             a{
+        a{
             padding:1rem;
             margin: 1rem;
             text-decoration:none;
@@ -66,6 +65,23 @@ The navbar should always be at the top of the viewport
             font-size: x-large;
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         }
+
+        @media (max-width: 765px) {
+            #welcome-section {
+                font-size: x-large;
+            }
+            #projects, #profile_link{
+                font-size: large;
+            }
+        }
+        @media (max-width: 425px) {
+            #welcome-section {
+                font-size: large;
+            }
+            #projects, #profile_link{
+                font-size: medium;
+            }
+        }
     </style>
 </head>
 <body>
@@ -73,14 +89,14 @@ The navbar should always be at the top of the viewport
         <ul>
             <li><a href="#welcome-section">Welcome</a></li>
             <li><a href="#projects">Project</a></li>
-            <li><a href="#profile_link">My Profile</a></li>
+            <li><a href="#profile_link">Profile</a></li>
         </ul>
     </nav>
     <section id="welcome-section">
         <h1>Welcome to my portfolio</h1>
     </section>
     <section id="projects">
-        My  all projects are listed on&ThickSpace;  <a href="http://github.com/hanshal18" target="_blank" rel="noopener noreferrer" class="project-tile"> https://www.github.com/hanshal18</a>
+        My  all projects are listed on&ThickSpace;  <a href="http://github.com/hanshal18" target="_blank" rel="noopener noreferrer" class="project-tile"> hanshal18</a>
     </section>
 
     <section id="profile_link">
