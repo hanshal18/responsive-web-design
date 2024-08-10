@@ -34,12 +34,13 @@ The navbar should always be at the top of the viewport
         #navbar ul {
             width: 100%;
             display: flex;
+            padding: 0;
             justify-content:center;
             align-items: center;
             list-style:none;
         }
 
-        #navbar ul li a{
+             a{
             padding:1rem;
             margin: 1rem;
             text-decoration:none;
@@ -49,7 +50,7 @@ The navbar should always be at the top of the viewport
         }
         #welcome-section {
             margin-top: 3rem;
-            /* height: 90vh; */
+            height: 90vh;
             width: 100%;
             display: flex;
             justify-content: center;
@@ -57,11 +58,13 @@ The navbar should always be at the top of the viewport
             font-size: xx-large;
             font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         }
-        #projects {
+        #projects, #profile_link {
             width: 100vw;
             display: flex;
             justify-content: center;
             align-items: center;
+            font-size: x-large;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         }
     </style>
 </head>
@@ -77,11 +80,11 @@ The navbar should always be at the top of the viewport
         <h1>Welcome to my portfolio</h1>
     </section>
     <section id="projects">
-        My Projects Are Listed On&ThickSpace;  <a href="http://github.com/hanshal18" target="_blank" rel="noopener noreferrer" class="project-tile"> https://www.github.com/hanshal18</a>
+        My  all projects are listed on&ThickSpace;  <a href="http://github.com/hanshal18" target="_blank" rel="noopener noreferrer" class="project-tile"> https://www.github.com/hanshal18</a>
     </section>
 
     <section id="profile_link">
-        <h1>freeCodeCamp profile:- <a id="profile-link" href="https://www.freecodecamp.org/hanshal18" target="_blank" rel="noopener noreferrer">click here</a></h1>
+        <h1><a id="profile-link" href="https://www.freecodecamp.org/hanshal18" target="_blank" rel="noopener noreferrer">freeCodeCamp profile</a></h1>
     </section>
 </body>
 </html>
