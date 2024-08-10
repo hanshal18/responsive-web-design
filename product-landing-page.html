@@ -17,12 +17,18 @@ Your product landing page should utilize CSS flexbox at least once
 -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chess Clock</title>
     <style>
-        header{
+        body {
+            background-color: #262626;
+            color: #ffffff;
+        }
+
+        header {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -30,10 +36,11 @@ Your product landing page should utilize CSS flexbox at least once
             flex-wrap: nowrap;
         }
 
-        header figure img{
-            width: 200px;
-            height:100px;
+        header figure img {
+            width: 50px;
+            height: 50px;
         }
+
         header ul {
             display: flex;
             justify-content: center;
@@ -45,30 +52,40 @@ Your product landing page should utilize CSS flexbox at least once
             list-style: none;
         }
 
+        header ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            padding: 10px;
+        }
+
+        header ul li a:hover {
+            background-color: #505050;
+            border-radius: 50px;
+        }
+
         #header {
             position: fixed;
-            top: 0; 
+            top: 0;
         }
+
         iframe {
             border-radius: 50px;
         }
-        #margin-top{
+
+        #margin-top {
             margin-top: 20rem;
             margin-bottom: 20rem;
         }
+
         #iframe {
-            width: 33%;
-            margin-left: auto;
-            margin-right: auto;
+            /* width: 33%; */
+            /* margin-left: auto; */
+            /* margin-right: auto; */
         }
-        h1 {
-            width: 33%;
-            margin: auto;
-            font-family: 'Courier New', Courier, monospace;
-        }
-        #form {
-            width: 33%;
-            margin: auto;
+
+        #in-form {
+            /* width: 100%; */
+            /* margin: auto; */
             font-family: 'Courier New', Courier, monospace;
             margin-bottom: 20rem;
         }
@@ -76,13 +93,16 @@ Your product landing page should utilize CSS flexbox at least once
         #form input {
             display: block;
         }
-        input[type="email"]{
-            width: 33%;
-            margin: 1rem auto;
+
+        input[type="email"] {
+            width: 20%;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
             height: 1.5rem;
             border-radius: 1rem;
         }
-        input[type="submit"]{
+
+        input[type="submit"] {
             background-color: #262626;
             color: #ffffff;
             width: 20%;
@@ -92,36 +112,66 @@ Your product landing page should utilize CSS flexbox at least once
             font-size: 1.5rem;
             font-family: 'Times New Roman', Times, serif;
         }
-        @media (max-width: 650px) {}
+
+        @media (max-width: 768px) {
+            input[type="email"],input[type="submit"] {
+                width: 33%;
+            }
+            iframe{
+                width: 400px;
+                height: 200px;
+            }
+        }
+
+        @media (max-width: 425px) {
+            input[type="email"],input[type="submit"] {
+                width: 50%;
+            }
+            iframe{
+                width: 300px;
+                height: 150px;
+            }
+            h1{
+                font-size: 1rem;
+            }
+        }
+
     </style>
 </head>
+
 <body>
     <header id="header">
         <figure>
-            <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/product-landing-page-logo.png" alt="chess clock" id="header-img">
+            <img src="https://raw.githubusercontent.com/hanshal18/responsive-web-design/main/extension_icon.png"
+                alt="chess clock" id="header-img"/>
         </figure>
         <nav id="nav-bar">
             <ul>
-                <li><a href="#video" class="nav-link">Video Demo</a></li>
-                <li><a href="#in-form" class="nav-link">Inquiry Form</a></li>
-                <li><a href="#footer" class="nav-link">Footer</a></li>
+                <li><a href="#margin-top" class="nav-link">Demo</a></li>
+                <li><a href="#in-form" class="nav-link">Form</a></li>
+                <li><a href="#footer" class="nav-link"></a></li>
             </ul>
         </nav>
     </header>
-    <section id="margin-top">
+    <center><section id="margin-top">
         <h1>Demo of how chess clock works</h1>
         <figure id="iframe">
-            <iframe  id="video" width="560" height="315" src="https://www.youtube-nocookie.com/embed/Hg75sM2VQiU?si=QI2Yybff50FWIbml" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe id="video" width="560" height="315"
+                src="https://www.youtube-nocookie.com/embed/Hg75sM2VQiU?si=QI2Yybff50FWIbml"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             <figcaption>This is just demo video</figcaption>
         </figure>
-    </section>
-    <section id="in-form">
+    </section></center>
+    <center><section id="in-form">
         <h1>Inquiry Form</h1>
         <form action="https://www.freecodecamp.com/email-submit" id="form">
-            <input type="email" name="email" id="email" placeholder="you personal email" required/>
+            <input type="email" name="email" id="email" placeholder="you personal email" required />
             <input type="submit" value="submit" id="submit">
         </form>
-    </section>
+    </section></center>
     <footer id="footer">for more info:- <a href="https://www.freecodecamp.org/hanshal18">@hanshal18</a></footer>
 </body>
+
 </html>
