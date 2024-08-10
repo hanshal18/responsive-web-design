@@ -19,33 +19,68 @@ The navbar should always be at the top of the viewport
     <title>Portfolio</title>
     <style>
         @media (max-width: 650px) {}
+        body{
+            background: #262626;
+            color:#ffffff;
+            margin: 0;
+        }
         #navbar{
+            width: 100%;
             position: fixed;
             top: 0;
+            background: #101010;
+            box-shadow: 0px 0px 10px 10px #f9f9f9;
+        }
+        #navbar ul {
+            width: 100%;
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            list-style:none;
+        }
+
+        #navbar ul li a{
+            padding:1rem;
+            margin: 1rem;
+            text-decoration:none;
+            color:#ffffff;
+            background-color: #404040;
+            border-radius: 50px;
         }
         #welcome-section {
             margin-top: 3rem;
+            /* height: 90vh; */
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: xx-large;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        #projects {
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     </style>
 </head>
 <body>
     <nav id="navbar">
         <ul>
-            <li><a href="#welcome-section">welcome</a></li>
-            <li><a href="#projects">project</a></li>
-            <li></li>
+            <li><a href="#welcome-section">Welcome</a></li>
+            <li><a href="#projects">Project</a></li>
+            <li><a href="#profile_link">My Profile</a></li>
         </ul>
     </nav>
     <section id="welcome-section">
         <h1>Welcome to my portfolio</h1>
     </section>
     <section id="projects">
-        <section class="project-tile"><a href=""></a></section>
-        <section class="project-tile"><a href=""></a></section>
-        <section class="project-tile"><a href=""></a></section>
-        <section class="project-tile"><a href=""></a></section>
+        My Projects Are Listed On&ThickSpace;  <a href="http://github.com/hanshal18" target="_blank" rel="noopener noreferrer" class="project-tile"> https://www.github.com/hanshal18</a>
     </section>
-    <section>
+
+    <section id="profile_link">
         <h1>freeCodeCamp profile:- <a id="profile-link" href="https://www.freecodecamp.org/hanshal18" target="_blank" rel="noopener noreferrer">click here</a></h1>
     </section>
 </body>
