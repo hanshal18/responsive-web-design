@@ -1,0 +1,27 @@
+body {
+    background-color: #262626;
+    color: #ffffff;
+}
+h1 {
+    width: 100%;
+    text-align: center;
+}
+
+figure img {
+    display: block;
+    max-width: 100%;
+    max-height: 500px;
+    margin: 0 auto;
+}
+#img-caption {
+    display: block;
+    width: 33%;
+    margin: 0 auto;
+}
+
+section p, p {
+    width: 100%;
+    max-width:  500px;
+    margin: 1rem auto;
+}
+

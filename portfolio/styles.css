@@ -1,0 +1,64 @@
+body{
+    background: #262626;
+    color:#ffffff;
+    margin: 0;
+}
+#navbar{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background: #101010;
+    box-shadow: 0px 0px 10px 10px #f9f9f9;
+}
+#navbar ul {
+    width: 100%;
+    display: flex;
+    padding: 0;
+    justify-content:center;
+    align-items: center;
+    list-style:none;
+}
+
+a{
+    padding:1rem;
+    margin: 1rem;
+    text-decoration:none;
+    color:#ffffff;
+    background-color: #404040;
+    border-radius: 50px;
+}
+#welcome-section {
+    margin-top: 3rem;
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#projects, #profile_link {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+@media (max-width: 765px) {
+    #welcome-section {
+        font-size: x-large;
+    }
+    #projects, #profile_link{
+        font-size: large;
+    }
+}
+@media (max-width: 425px) {
+    #welcome-section {
+        font-size: large;
+    }
+    #projects, #profile_link{
+        font-size: medium;
+    }
+}
